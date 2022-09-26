@@ -1,0 +1,30 @@
+<div class="container my-5">
+<div class="row">
+  <div class="input-group my-1">
+    <span class="input-group-text">First name</span>
+    <input type="text" [(ngModel)]="student.fName" aria-label="First name" class="form-control">
+    <span class="input-group-text">last name</span>
+    <input type="text" [(ngModel)]="student.lName" aria-label="Last name" class="form-control">
+  </div>
+  <div class="input-group my-1">
+    <span class="input-group-text">Age</span>
+    <input type="text" [(ngModel)]="student.age" aria-label="Last name" class="form-control">
+    <span class="input-group-text">Unit</span>
+    <input type="text" [(ngModel)]="student.unit" aria-label="Last name" class="form-control">
+  </div>
+  <div class="input-group my-1">
+    <span class="input-group-text">Education</span>
+    <div class="form-floating">
+      <select class="form-select" [(ngModel)] = "student.education" id="floatingSelect" aria-label="Floating label select example">
+        <option *ngFor="let degree of education">{{degree}}</option>
+      </select>
+      <label for="floatingSelect">Select your education</label>
+    </div>
+  </div>
+</div>
+<div class="d-grid my-3">
+  <button class="btn btn-primary" type="button" (click)="save()">Save</button>
+</div>
+</div>
+
+
